@@ -1,0 +1,32 @@
+{
+  "name": "qr_chat_npm",
+  "version": "1.0.0",
+  "description": "QR code which links to a chatroom for anonymous communication in your community. This will be an npm package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pran-Ker/QR_chat_npm.git"
+  },
+  "keywords": [
+    "nodejs",
+    "reactjs",
+    "mongoDB",
+    "npm"
+  ],
+  "author": "Prannay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pran-Ker/QR_chat_npm/issues"
+  },
+  "homepage": "https://github.com/Pran-Ker/QR_chat_npm#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7",
+    "qrcode": "^1.5.1",
+    "ws": "^8.12.1"
+  }
+}

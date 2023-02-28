@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Page</title>
+  </head>
+  <body>
+    <h1>Chat Page</h1>
+    <div id="chat"></div>
+
+    <script>
+      // Connect to the WebSocket server for this URL
+      const socket = new WebSocket(`ws://${window.location.host}`);
+
+      // Handle incoming messages from the server
+      socket.addEventListener('message', event => {
+        const message = JSON.parse(event.data);
+        const chat = document.getElementById('chat');
+        const text = document.createElement('p');
+        text.innerText = `${message.username}: ${message.text}`;
+        chat.appendChild(text);
+      });
+
+      // Send a message to the server when the form is submitted
+      document.getElementById('form').addEventListener('submit', event => {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const text = document.getElementById('text').value;
+        socket.send(JSON.stringify({ username, text }));
+        document.getElementById('text').value = '';
+      });
+    </script>
+
+    <form id="form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="text" id="text" placeholder="Message" required>
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
