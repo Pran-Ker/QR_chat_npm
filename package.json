@@ -1,6 +1,6 @@
 {
   "name": "qr_chat_npm",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "description": "QR code which links to a chatroom for anonymous communication in your community. This will be an npm package.",
   "main": "server.js",
   "scripts": {
