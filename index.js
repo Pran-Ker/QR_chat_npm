@@ -9,7 +9,7 @@ const server = app.listen(3000, () => {
 });
 
 // Generate a random URL for the chat page
-const chatUrl = `http://localhost:3000/${Math.random().toString(36).substr(2, 8)}`;
+const chatUrl = `http://localhost:3000/${Math.random().toString(36).substring(2, 8)}`;
 
 // Generate a QR code for the chat page
 qr.toDataURL(chatUrl, (err, qrCodeUrl) => {
