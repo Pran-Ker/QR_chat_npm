@@ -29,7 +29,9 @@ This will return a QR code image file that you can save or display.
 ## Get a Unique URL
 To get a unique URL for your chat group, use the getUniqueUrl function:
 
-`const uniqueUrl = qr_chat.getUniqueUrl();`
+```javascript
+const uniqueUrl = qr_chat.getUniqueUrl();
+```
 
 This will return a unique URL that you can use for your chat group.
 
