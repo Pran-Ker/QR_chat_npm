@@ -38,7 +38,7 @@ app.post('/room', (req, res) => {
   }
   rooms[req.body.room] = { users: {} };
   res.redirect(req.body.room);
-  // Send message that new room was created
+  
   io.emit('room-created', req.body.room);
 });
 
@@ -46,7 +46,7 @@ app.get('/:room', (req, res) => {
   if (rooms[req.params.room] == null) {
     return res.redirect('/');
   }
-  // Generate QR code for the room URL
+  
   const url = `${req.protocol}://${req.get('host')}/${req.params.room}`;
   const qr = qrcode.toDataURL(url);
   res.render('room', { roomName: req.params.room, qr: qr });
