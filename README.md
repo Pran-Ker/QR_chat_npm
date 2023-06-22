@@ -1,5 +1,7 @@
 # Qr_chat_npm
 
+## Start the project from `commit 289384f` as the current builds are in development and mostly broken.
+
 Built with React, Node Js and HTML/CSS, the project aims to allows users to spin up new chatroom with exclusive access only through QR codes. 
 
 qr_chat_npm is an npm package that allows you to generate unique QR codes that link to unique URLs with their own chat functionality. This package is designed to create anonymous chat groups for your community, college, stores, and more.
